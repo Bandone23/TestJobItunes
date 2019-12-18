@@ -1,7 +1,8 @@
-package com.example.mytestitunesnew
+package com.example.mytestitunesnew.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.mytestitunesnew.R
 
 class MainActivity : AppCompatActivity() {
 
