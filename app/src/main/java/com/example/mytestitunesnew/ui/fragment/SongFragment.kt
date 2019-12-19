@@ -27,7 +27,6 @@ class SongFragment : BaseFragment() {
         fun newInstance() = SongFragment()
     }
 
-
     private val viewModel: SongViewModel by viewModel()
     lateinit var binding: FragmentSongBinding
 
@@ -48,7 +47,6 @@ class SongFragment : BaseFragment() {
 
         }
         viewModel.getSong()
-
 
         return binding.root
     }
@@ -81,10 +79,9 @@ class SongFragment : BaseFragment() {
 
     private fun songClicked(song: SongList, viewId: Int) {
         when (viewId) {
-            R.id.imageView -> {
-               /* val auditMatchFragment =
-                    AuditMatchFragment.newInstance(matches.time_match, matches.date)
-                auditMatchFragment.show(fragmentManager!!, "audit match")*/
+            R.id.card_song -> {
+                val songDetailFragment = SongDetailFragment.newInstance(song.artworkUrl100,song.collectionName,song.trackNumber)
+                songDetailFragment.show(fragmentManager!!, "songDetail")
 
 
             }
